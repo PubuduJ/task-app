@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Task} from "./types";
 import InputField from "./components/InputField";
+import TaskList from "./components/TaskList";
 
 function App() {
     const [task, setTask] = useState<string>("");
@@ -22,6 +23,7 @@ function App() {
         <div className={"app"}>
             <span className={"heading"}>Task App</span>
             <InputField task={task} setTask={setTask} handleAdd={handleAdd}/>
+            <TaskList tasks={tasks} setTasks={setTasks}/>
         </div>
     );
 }
