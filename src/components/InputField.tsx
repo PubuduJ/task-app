@@ -19,7 +19,8 @@ function InputField({task, setTask, handleAdd}: InputFieldProps) {
             handleAdd(event);
             inputRef.current?.blur();
         }}>
-            <input ref={inputRef} className={"input-box"} type={"text"} placeholder={"Enter a task"} onChange={handleChange} value={task}/>
+            <input ref={inputRef} className={"input-box"} type={"text"} placeholder={"Enter a task"}
+                   onChange={handleChange} value={task}/>
             <button className={"input-submit"} type={"submit"}>Go</button>
         </form>
     );

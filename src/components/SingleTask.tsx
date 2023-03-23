@@ -59,7 +59,8 @@ function SingleTask({task, tasks, setTasks}: SingleTaskProps) {
                 edit ? (
                     <input ref={inputRef} className={"tasks-single-text"} value={editTask} onChange={handleChange}/>
                 ) : (
-                    task.isDone ? (<s className={"tasks-single-text"}>{task.task}</s>) : (<span className={"tasks-single-text"}>{task.task}</span>)
+                    task.isDone ? (<s className={"tasks-single-text"}>{task.task}</s>) : (
+                        <span className={"tasks-single-text"}>{task.task}</span>)
                 )
             }
             <div>
